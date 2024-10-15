@@ -1,38 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* Estilos generales */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Merriweather', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Header */
 header {
-    background-color: #003366;
+    background-color:rgba(100, 100, 100, 0.1);
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
+    text-align: center;
+    backdrop-filter: blur(2px);
+    width: 100%;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+}
+header i {
+    margin-right: 8px;
 }
 nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
     justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: 400;
 }
 
+main {
+    padding-top: 80px;
+}
+/* Sección de video de fondo */
 main section {
     padding: 20px;
     text-align: center;
-}
-/* Media query para pantallas pequeñas */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-.active {
-    font-weight: bold;
-    text-decoration: underline;
 }
 
 .bg-video video {
@@ -43,10 +54,26 @@ main section {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    filter: brightness(0.2); 
 }
 .overlay-content {
     position: relative;
     color: white;
     text-align: center;
     padding: 100px 20px;
+    z-index: 1;
+}
+
+/* Enlace activo */
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
