@@ -27,7 +27,7 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 0;
     margin: 0;
 }
@@ -75,5 +75,24 @@ main section {
     nav ul {
         flex-direction: column;
         gap: 10px;
+        justify-content: space-evenly;
     }
+}
+
+/* Contenedor de logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre el icono y el título */
+}
+
+/* Estilo para el ícono y el título */
+.logo-container i {
+    font-size: 1.5em; /* Tamaño del ícono */
+}
+
+.logo-container h1 {
+    font-size: 1.5em; /* Tamaño del título */
+    margin: 20px; /* Elimina el margen para mejor alineación */
 }
